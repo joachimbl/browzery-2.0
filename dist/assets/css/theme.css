@@ -8043,7 +8043,48 @@ img.zoom-img {
   filter: "alpha(opacity=100)";
   opacity: 1; }
 
+.link-card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer; }
+
 .card-img-top {
   border-radius: 0.6rem 0.6rem 0 0; }
+
+.card-favicon {
+  height: 15px;
+  padding-right: 5px; }
+
+.card-type-article .card-text {
+  height: 100%;
+  overflow: hidden; }
+
+.card-type-article:hover .card-text {
+  display: block; }
+
+.card-type-img-gif:hover .gif-static, .card-type-img-gif:hover .video-play-icon, .card-type-img-gif:focus .gif-static, .card-type-img-gif:focus .video-play-icon, .card-type-img-gif .video-cover-playing .gif-static, .card-type-img-gif .video-cover-playing .video-play-icon {
+  display: none; }
+
+.card-type-img-gif:hover .gif-playing, .card-type-img-gif:focus .gif-playing, .card-type-img-gif .video-cover-playing .gif-playing {
+  display: block; }
+
+.card-type-img-gif .video-play-icon {
+  position: absolute;
+  top: 14%;
+  left: 14%;
+  height: 34px;
+  width: 34px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 34px;
+  z-index: 2;
+  margin-bottom: 0 !important; }
+
+.card-type-img-gif .gif-playing {
+  width: 100%;
+  display: none; }
+
+.card-type-img-gif .gif-static {
+  width: 100%; }
 
 /*# sourceMappingURL=theme.css.map */
