@@ -14,7 +14,7 @@
     <body>
 
         <div class="nav-container">
-            <div class="navbar-light bg-light" data-sticky="top">
+            <div class="navbar-light bg-white">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="index.html">
@@ -26,14 +26,14 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="app-collection-cards.html" class="nav-link">Overview</a>
+                                    <a href="demo-dashboard.html" class="nav-link active">Dashboard</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">Pages</a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">Explore</a>
                                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
 
-                                        <a class="dropdown-item" href="pages-landing.html">
-                                            <span class="h6 mb-0">Landing Pages</span>
+                                        <a class="dropdown-item" href="demo-explore.html">
+                                            <span class="h6 mb-0">Collections</span>
                                             <p class="text-small text-muted">Showcase your product in style</p>
                                         </a>
 
@@ -41,7 +41,7 @@
 
 
                                         <a class="dropdown-item" href="pages-app.html">
-                                            <span class="h6 mb-0">App Pages</span>
+                                            <span class="h6 mb-0">Links</span>
                                             <p class="text-small text-muted">Build detailed, functional web apps</p>
                                         </a>
 
@@ -49,42 +49,57 @@
 
 
                                         <a class="dropdown-item" href="pages-inner.html">
-                                            <span class="h6 mb-0">Inner Pages</span>
+                                            <span class="h6 mb-0">People</span>
                                             <p class="text-small text-muted">Complete your online presence</p>
                                         </a>
 
 
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="componentsDropdown" role="button" data-toggle="dropdown">Components</a>
-                                    <div class="dropdown-menu" aria-labelledby="componentsDropdown">
-
-                                        <a class="dropdown-item" href="components-bootstrap.html">Bootstrap</a>
-
-                                        <a class="dropdown-item" href="components-wingman.html">Wingman</a>
-
-                                    </div>
-                                </li>
                             </ul>
                             <form class="form-inline col p-0 pl-md-2 pr-md-3">
-                                <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group">
+                                  <div class="input-group-btn">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Action
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div role="separator" class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                  </div>
+                                  <input class="form-control w-80" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+
                             </form>
 
 
 
                             <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="app-collection-cards.html" class="nav-link"><i class="icon-bell"></i>
+                                    <span class="badge badge-danger">8</span></a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center">
+                                    <a href="#{https://themes.getbootstrap.com/product/wingman-landing-page-app-template}" class="btn btn-primary bg-gradient"><i class="icon-plus icon-lg"></i></a>
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle dropdown-toggle-no-arrow p-lg-0" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img alt="Image" src="assets/img/avatar-male-3.jpg" class="avatar avatar-xs" />
-                                        <span class="badge badge-danger">8</span>
+
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right" aria-labelledby="dropdown01">
                                         <a class="dropdown-item" href="#">Notifications <span class="badge badge-danger">8</span></a>
                                         <a class="dropdown-item" href="#">Profile</a>
                                         <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Add link</a>
+                                        <a class="dropdown-item" href="#">Add Collection</a>
+                                        <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#">Settings</a>
-                                        <a class="dropdown-item" href="#">Groups</a>
+                                        <a class="dropdown-item" href="demo-stats.html">Stats</a>
                                         <a class="dropdown-item" href="#">Log out</a>
                                     </div>
                                 </li>
@@ -145,15 +160,36 @@
             </section>
             <section class="space-sm">
                 <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="icon-magnifying-glass h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
                     <div class="row">
                         <div class="col text-center">
                             <div class="mb-3">
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Technology</a>
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Lifestyle</a>
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Marketing</a>
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Health &amp; Fitness</a>
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Music</a>
-                                <a href="#" class="btn btn-secondary bg-gradient mb-1">Productivity</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Technology</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Lifestyle</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Marketing</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Health &amp; Fitness</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Music</a>
+                                <a href="#" class="btn btn-outline-secondary mb-1">Productivity</a>
                             </div>
                             <a href="#" class="text-small">Explore all categories &rsaquo;</a>
                         </div>
@@ -187,13 +223,14 @@
                     <ul class="row feature-list feature-list-sm">
 
                         <li class="col-12 col-md-6 col-lg-4">
-                            <div class="card">
+                            <div class="card link-card card-type-article">
                                 <a href="#">
                                     <img class="card-img-top" src="http://i-cdn.embed.ly/1/display/crop?height=300&key=fd92ebbc52fc43fb98f69e50e7893c13&url=https%3A%2F%2Ffeed.muzli.space%2Fmuzli_feed%2Fwp-content%2Fuploads%2F2018%2F04%2F16101733%2FCamilleOrtoli_cat_C2A9CamilleOrtoli1.jpg&width=636" alt="Card image cap">
                                 </a>
                                 <div class="card-body">
+                                    <p><img src="assets/img/logo-slack.svg" class="card-favicon">somesite.com</p>
                                     <h4 class="card-title">Amazing Haussmann Building with Paper</h4>
-                                    <p class="card-text">Holistic fitness tracking</p>
+                                    <p class="card-text">This is a normal article</p>
                                 </div>
                                 <div class="card-footer card-footer-borderless d-flex justify-content-between">
                                     <div class="text-small">
@@ -202,6 +239,7 @@
                                             <li class="list-inline-item"><i class="icon-message"></i> 14</li>
                                         </ul>
                                     </div>
+
                                     <div class="dropup">
                                         <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="SidekickButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-dots-three-horizontal"></i>
@@ -219,14 +257,22 @@
                         </li>
                         <!--end of col-->
 
-                        <li class="col-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <a href="#">
-                                    <img class="card-img-top" src="assets/img/graphic-product-pitstop.jpg" alt="Card image cap">
-                                </a>
+                        <li class="col-12 col-md-6 col-lg-8">
+                            <div class="card link-card card-type-video">
+                                <div class="video-cover card-img-top">
+                                  <img alt="Image" src="assets/img/photo-man-whiteboard.jpg" class="bg-image" />
+                                  <div class="video-play-icon">
+                                    <i class="icon-controller-play"></i>
+                                  </div>
+                                  <div class="embed-responsive embed-responsive-16by9 card-img-top"> <!--Bemærk parametrer i videolink laver autoplay !-->
+                                    <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/MLUvOtqTmYM?rel=0&amp;showinfo=0&autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+
+
                                 <div class="card-body">
-                                    <h4 class="card-title">Pitstop</h4>
-                                    <p class="card-text">Browser-based project management</p>
+                                    <p><img src="assets/img/logo-slack.svg" class="card-favicon">somesite.com</p>
+                                    <h4 class="card-title">Tight pants</h4>
                                 </div>
                                 <div class="card-footer card-footer-borderless d-flex justify-content-between">
                                     <div class="text-small">
@@ -253,26 +299,32 @@
                         <!--end of col-->
 
                         <li class="col-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <a href="#">
-                                    <img class="card-img-top" src="assets/img/graphic-product-pipeline.jpg" alt="Card image cap">
-                                </a>
+                            <div class="card card-type-img-gif link-card">
+                                <div class="video-cover card-img-top bg-light">
+                                  <img alt="Image" src="https://lh4.googleusercontent.com/-gZiu96oTuu4/Uag5oWLQHfI/AAAAAAAABSE/pl1W8n91hH0/w140-h165-no/Homer-Static.png" class="gif-static" />
+                                  <div class="video-play-icon">
+                                    GIF
+                                  </div>
+                                    <img alt="Image" src="https://lh4.googleusercontent.com/i1RprwcvxhbN2TAMunNxS4RiNVT0DvlD9FNQCvPFuJ0=w140-h165-no" class="gif-playing" />
+                                </div>
+
+
                                 <div class="card-body">
-                                    <h4 class="card-title">pipeline.js</h4>
-                                    <p class="card-text">Snappy UI interaction library with flexible API</p>
+                                    <p><img src="assets/img/logo-slack.svg" class="card-favicon">somesite.com</p>
+                                    <h4 class="card-title">Tight pants</h4>
                                 </div>
                                 <div class="card-footer card-footer-borderless d-flex justify-content-between">
                                     <div class="text-small">
                                         <ul class="list-inline">
-                                            <li class="list-inline-item"><i class="icon-heart"></i> 84</li>
-                                            <li class="list-inline-item"><i class="icon-message"></i> 25</li>
+                                            <li class="list-inline-item"><i class="icon-heart"></i> 90</li>
+                                            <li class="list-inline-item"><i class="icon-message"></i> 34</li>
                                         </ul>
                                     </div>
                                     <div class="dropup">
-                                        <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="pipeline.jsButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="PitstopButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-dots-three-horizontal"></i>
                                         </button>
-                                        <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="pipeline.jsButton">
+                                        <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="PitstopButton">
                                             <a class="dropdown-item" href="#">Save</a>
                                             <a class="dropdown-item" href="#">Share</a>
                                             <a class="dropdown-item" href="#">Comment</a>
@@ -407,9 +459,6 @@
                                 <li class="list-inline-item">
                                     <a href="#">Documentation</a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="#">Changelog</a>
-                                </li>
                             </ul>
                         </div>
                         <!--end of col-->
@@ -419,7 +468,7 @@
                                     <a href="#"><i class="socicon-twitter"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#"><i class="socicon-facebook"></i></a>
+                                    <a href="http://facebook.com/browzery"><i class="socicon-facebook"></i></a>
                                 </li>
                             </ul>
                         </div>
