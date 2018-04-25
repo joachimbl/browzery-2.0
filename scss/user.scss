@@ -1,0 +1,71 @@
+//
+//
+// user.scss
+//
+// Place your own custom CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,400i,500,700,900');
+
+.link-card {
+  &:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+.card-img-top {
+  border-radius:  $border-radius $border-radius 0 0 ;
+}
+
+.card-favicon {
+  height: 15px;
+  padding-right: 5px;
+}
+
+.card-type-article {
+  .card-text {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &:hover {
+    .card-text {
+      display: block;
+    }
+  }
+}
+
+
+.card-type-img-gif {
+  &:hover, &:focus, .video-cover-playing{
+    .gif-static, .video-play-icon {
+      display: none;
+    }
+
+    .gif-playing {
+      display: block;
+    }
+  }
+
+  .video-play-icon {
+    position: absolute;
+    top: 14%;
+    left: 14%;
+    height: 34px;
+    width: 34px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 34px;
+    z-index: 2;
+    margin-bottom: 0 !important;
+  }
+
+  .gif-playing {
+    width: 100%;
+    display: none;
+  }
+  .gif-static {
+    width: 100%;
+  }
+}
