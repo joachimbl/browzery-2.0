@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,400i,500,700,900');
 
 .link-card {
-  &:hover {
+  &:hover, &:focus {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
@@ -17,6 +17,27 @@
 .card-img-top {
   border-radius:  $border-radius $border-radius 0 0 ;
 }
+
+.card-video-top {
+  border-radius:  $border-radius $border-radius 0 0 ;
+
+}
+
+@include media-breakpoint-down(xs) {
+  .card-video-top {
+    display:inline-block;
+    overflow:hidden;
+    z-index:2;
+    position:relative;
+
+    iframe {
+      /*Minor, quick failsafe */
+      z-index:1;
+      position:relative;
+    }
+  }
+}
+
 
 .card-favicon {
   height: 15px;
@@ -36,22 +57,20 @@
   }
 }
 
+.card-type-video {
+  .video-cover:not(:last-child) {
+      margin-bottom: 0;
+  }
+}
 
 .card-type-img-gif {
-  &:hover, &:focus, .video-cover-playing{
-    .gif-static, .video-play-icon {
-      display: none;
-    }
-
-    .gif-playing {
-      display: block;
-    }
-  }
-
-  .video-play-icon {
+  .gif-play-icon {
     position: absolute;
-    top: 14%;
-    left: 14%;
+    background: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    top: 15px;
+    left: 15px;
     height: 34px;
     width: 34px;
     font-size: 0.8rem;
@@ -59,6 +78,16 @@
     line-height: 34px;
     z-index: 2;
     margin-bottom: 0 !important;
+  }
+
+  &:focus {
+    .gif-static {
+      display: none;
+    }
+
+    .gif-playing {
+      display: block;
+    }
   }
 
   .gif-playing {
@@ -69,3 +98,58 @@
     width: 100%;
   }
 }
+
+.card-header {
+  span {
+    opacity: 0.7;
+    }
+  .btn-sm {
+    opacity: 0;
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .btn-sm {
+      opacity: 1;
+      background: #f8f8f8;
+      border-radius: 50%;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+
+.card {
+  .btn-outline-primary {
+    border-color: #eee !important;
+  }
+
+  .list-inline {
+    opacity: 0.5;
+  }
+
+ &:hover {
+  .list-inline {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+ }
+}
+
+@include media-breakpoint-up(sm) {
+  .card-type-img-gif {
+    &:hover, &:active, &:focus {
+      .gif-static, .gif-play-icon {
+        display: none;
+      }
+
+      .gif-playing {
+        display: block;
+      }
+    }
+  }
+}
+

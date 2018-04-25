@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 // video.scss
 //
 //
@@ -26,6 +26,7 @@ $video-cover-transition: .35s;
 
 .video-cover{
   background: $black;
+  border-radius:  $border-radius $border-radius 0 0 ;
   position: relative;
   overflow: hidden;
   .bg-image{
